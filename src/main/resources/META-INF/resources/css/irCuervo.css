@@ -1,0 +1,50 @@
+.fondo{
+	height: 50rem;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: top center !important;
+    position: relative;
+    opacity: .5;
+}
+.bd{
+    width: 100%;
+    padding: 22px 26px;
+    position: absolute;
+    top: 10rem;
+    z-index: 3;
+}
+.sh{
+	line-height: 1rem;
+}
+.parr{
+	margin-top: 2.5rem;
+}
+#opaci{
+	background-color: black;
+}
+.decora{
+	border: 0.1em solid #d0b370;
+	padding: 18px 29px;
+}
+@media (max-width: 1024px) {
+  .sh{
+	line-height: 1.3rem;
+	}
+}
+@media (max-width: 991px) {
+  .sh{
+	text-align: center;
+	}
+	.cen {
+	width: fit-content;
+    display: block;
+    margin: auto;
+}
+.cen{
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.parr strong{
+	font-size: 95%;
+}
