@@ -7,7 +7,7 @@
     opacity: .5;
 }
 .bd{
-    width: 99%;
+    width: 100%;
     padding: 22px 26px;
     position: absolute;
     top: 10rem;
@@ -21,6 +21,7 @@
 }
 #opaci{
 	background-color: black;
+	position: relative;
 }
 .decora{
 	border: 0.1em solid #d0b370;
