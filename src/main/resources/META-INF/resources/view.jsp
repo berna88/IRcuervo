@@ -35,12 +35,10 @@
 			</div>
 			
 	</div>
-	
 <script src="https://ircuervo.com/js/vendor-2608cf24.js">
-	
 </script>
-
 <script>
+console.log("Hola");
 	$(document)
 			.ready(
 					function() {
@@ -49,6 +47,12 @@
 									url : "https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&interval=15min&symbol=CUERVO.MX&apikey=J8OCON8X4HSXL9KS",
 									method : "get",
 									success : function(data) {
+										console.log(data);
+										console.log("data");
+										console.log(data["Meta Data"]["3. Last Refreshed"]);
+										var fecha = new Date(data["Meta Data"]["3. Last Refreshed"]);
+										console.log("fecha");
+										console.log(fecha);
 										return $("#last-update").html(moment(data["Meta Data"]["3. Last Refreshed"]).format('lll') + " EDT");
 									}
 								});
