@@ -1,10 +1,12 @@
 package IRcuervo.constants;
 
 /**
- * @author bernardohernandez
+ * @author Bernardo Hernández Ramírez
  */
 public class IRcuervoPortletKeys {
-
+	/**
+	 * Clave del portlet
+	 */
 	public static final String IRcuervo = "ircuervo";
 
 }

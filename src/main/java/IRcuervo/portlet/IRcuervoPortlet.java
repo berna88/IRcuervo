@@ -9,7 +9,9 @@ import javax.portlet.Portlet;
 import org.osgi.service.component.annotations.Component;
 
 /**
- * @author bernardohernandez
+ * @author Bernardo Hernández Ramírez
+ * @version 1.0.0
+ * @since 2020-02-26
  */
 @Component(
 	immediate = true,
