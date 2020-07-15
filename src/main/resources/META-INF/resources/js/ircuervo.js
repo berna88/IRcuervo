@@ -4,8 +4,15 @@ $(document)
 						$.ajax({
 									url : "https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&interval=15min&symbol=CUERVO.MX&apikey=J8OCON8X4HSXL9KS",
 									method : "get",
-									success : function(data) {					
-										var date = new Date(data["Meta Data"]["3. Last Refreshed"]);						
+									success : function(data) {
+										console.log('Hola data');
+										console.log(data);
+										console.log(data["Meta Data"]["3. Last Refreshed"]);
+										//var date = new Date(data["Meta Data"]["3. Last Refreshed"]);
+										var fechaString = data["Meta Data"]["3. Last Refreshed"];
+										var date = new Date('2017-11-14 20:00:00'.replace(/\s/, 'T'));
+										console.log('Hola date');
+										console.log(date);
 										var months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];						
 										function formatAMPM(date) {
 											  var hours = date.getHours();
@@ -15,8 +22,13 @@ $(document)
 											  hours = hours ? hours : 12; // the hour '0' should be '12'
 											  minutes = minutes < 10 ? '0'+minutes : minutes;
 											  var strTime = hours + ':' + minutes + ' ' + ampm;
+											  console.log('Bernardo');
+											  console.log(strTime);
 											  return strTime;
 											}
+										console.log(date.getMonth());
+										console.log(date.getDate());
+										
 										return $("#last-update").html(months[date.getMonth()]+" "+ date.getDate()+", "+ date.getFullYear()+" "+formatAMPM(new Date(data["Meta Data"]["3. Last Refreshed"]))+ " EDT");
 									}
 								});
